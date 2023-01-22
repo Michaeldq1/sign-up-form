@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="left-container">
+        <div class="banner">
+            <img src="../sign-up-form/images/logo.svg" alt="">
+            Lomond
+        </div>
+        <div class="citation">
+            Photo by <a href="https://unsplash.com/@aronvisuals">Aron Visuals</a> on <a href="https://unsplash.com/">Unsplash</a>
+        </div>
+    </div>
+    <div class="right-container">
+        <div class="description">
+            Apply now!
+        </div>
+        <div class="form">
+            <form>
+                <fieldset>
+                    <div class="form-column">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="John">
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="johndoe@gmail.com">
+
+                        <label for="user_password">Password:</label>
+                        <input type="password" name="password" id="user_password" placeholder="********">
+                    </div>
+                    
+                    <div class="form-column">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Doe">
+
+                        <label for="phone-number">Phone Number:</label>
+                        <input type="tel" name="phone-number" id="phone-number" placeholder="(xxx) xxx-xxxx">
+
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" name="password" id="confirm_password" placeholder="********">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="signup">
+            <button type="submit">Create Account</button>
+            <div class="login">Already have an account? <a display="inline">Log in.</a></div>
+        </div>
+    </div>
+</body>
+</html>
