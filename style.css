@@ -24,8 +24,9 @@ body {
 .left-container {
     flex: 2;
     background-image: url(../sign-up-form/images/mountain-dusk.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .banner {
@@ -37,7 +38,7 @@ body {
     font-size: 48px;
     background-color: rgb(16,52,62, 0.5);
     position: relative;
-    top: 16%;
+    top: 15%;
 }
 
 .citation {
@@ -58,12 +59,13 @@ a {
     display: flex;
     flex-direction: column;
     font-size: var(--main-font-size);
+    height: 100%;
 }
 
 .description, .form, .signup {
     flex: 1;
     color: white;
-    padding: 40px 55px;
+    padding: 6% 8%;
 }
 
 .description {
@@ -74,7 +76,6 @@ a {
 
 .form {
     flex: 1;
-    padding: 55px;
     border-top: 2px solid var(--quarternary-color);
     border-bottom: 2px solid var(--quarternary-color);
     border-image: linear-gradient(
@@ -83,9 +84,10 @@ a {
 
 fieldset {
     display: flex;
-    gap: 25px;
+    gap: 3.7%;
     border: none;
     font-size: var(--main-font-size);
+    height: 100%;
 }
 
 .form-column {
@@ -93,14 +95,13 @@ fieldset {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
 }
 
 input {
     height: 30px;
-    width: 300px;
+    width: 80%;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 1.5%;
     font-size: var(--main-font-size);
     background-color: rgb(7,92,88);
     padding-left: 5px;
@@ -126,5 +127,11 @@ button {
 }
 
 .login {
-    margin-top: 20px;
+    margin-top: 3%;
+}
+
+@media all and (max-width = 428px) {
+    body {
+        flex-direction: column;
+    }
 }
