@@ -10,6 +10,7 @@
 * {
     margin: 0;
     padding: 0;
+    caret-color: transparent;
 }
 
 body {
@@ -26,7 +27,6 @@ body {
     background-image: url(../sign-up-form/images/mountain-dusk.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
 .banner {
@@ -93,8 +93,9 @@ fieldset {
 .form-column {
     flex: 1;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    gap: 5px;
+    overflow: none;
 }
 
 input {
@@ -107,12 +108,32 @@ input {
     padding-left: 5px;
     color: white;
     border: none;
+    outline: 1px solid white;
+    border: 2px solide white;
+    cursor: pointer;
+    caret-color: auto;
+}
+
+input:focus {
+    background-color:  var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.error {
+    outline: 2px solid red;
+    background-color: lightcoral;
 }
 
 .signup {
     display: flex;
     flex-direction: column;
     font-size: 14px;
+}
+
+#password-check {
+    color: var(--secondary-color);
+    font-size: 12px;
 }
 
 button {
@@ -124,14 +145,54 @@ button {
     border-radius: 4px;
     font-weight: bold;
     font-size: var(--main-font-size);
+    margin-top: 5%;
+    cursor: pointer;
 }
 
 .login {
     margin-top: 3%;
 }
 
-@media all and (max-width = 428px) {
+@media all and (max-width: 617px) {
     body {
         flex-direction: column;
+    }
+
+    .banner {
+        height: 75px;
+        top: 5%;
+    }
+
+    .citation {
+        position: relative;
+        top: 25%;
+    }
+
+    .left-container {
+        background-size: 100%;
+        background-position: center -50px;
+    }
+
+    .description, .signup, .form {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-column {
+        gap: 5px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 465px) {
+    .citation {
+        top: 60%;
     }
 }
