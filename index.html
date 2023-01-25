@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Sign-Up</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,39 +22,49 @@
     </div>
     <div class="right-container">
         <div class="description">
-            Apply now!
+            Get Started
         </div>
         <div class="form">
             <form>
                 <fieldset>
                     <div class="form-column">
                         <label for="first-name">First Name:</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="John">
+                        <input type="text" id="first-name" name="first-name" 
+                            placeholder="John" required tabindex="1">
 
                         <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" placeholder="johndoe@gmail.com">
+                        <input type="email" name="email" id="email" 
+                            placeholder="johndoe@example.com" required tabindex="3">
 
                         <label for="user_password">Password:</label>
-                        <input type="password" name="password" id="user_password" placeholder="********">
+                        <input type="password" name="password" id="user_password" 
+                            placeholder="********" required tabindex="5" minlength="8">
                     </div>
                     
-                    <div class="form-column">
+                    <div class="form-column" id="warning">
                         <label for="last-name">Last Name:</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Doe">
+                        <input type="text" id="last-name" name="last-name" 
+                            placeholder="Doe" required tabindex="2">
 
                         <label for="phone-number">Phone Number:</label>
-                        <input type="tel" name="phone-number" id="phone-number" placeholder="(xxx) xxx-xxxx">
+                        <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="123-456-7890" required tabindex="4" >
 
                         <label for="confirm_password">Confirm Password:</label>
-                        <input type="password" name="password" id="confirm_password" placeholder="********">
+                        <input type="password" name="password" id="confirm_password" 
+                            placeholder="********" required tabindex="6">
+                        <div id="password-check">
+                            Passwords do not match!
+                        </div>
                     </div>
                 </fieldset>
+                <button type="submit" id="create-account" tabindex="7">Create Account</button>
             </form>
         </div>
         <div class="signup">
-            <button type="submit">Create Account</button>
             <div class="login">Already have an account? <a display="inline">Log in.</a></div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
